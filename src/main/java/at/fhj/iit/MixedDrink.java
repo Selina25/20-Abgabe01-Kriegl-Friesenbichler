@@ -3,12 +3,13 @@ package main.java.at.fhj.iit;
 import java.util.List;
 /**
  * Class represents a mixed drink which can has to contain one alcoholic and one non-alcoholic liquid
- * drinks
+ * and can be refined with different other ingredients and one syrup.
+ * The mixed drink can be shook and stirred
  */
 public class MixedDrink extends Drink {
 
     /**
-     * This enum contains all possible sirup which can be added to the mixed drink
+     * This enum contains all possible syrup which can be added to the mixed drink
      */
     protected enum Syrup {
        elderberry,
@@ -20,11 +21,22 @@ public class MixedDrink extends Drink {
 
     }
 
+    /**
+     *  name of liquid number one
+     */
     protected  Liquid l1;
+    /**
+     *  name of liquid number two
+     */
     protected  Liquid l2;
+    /**
+     *  name of the list with the extra igrendients
+     */
     protected List<String> otherIngredients;
+    /**
+     *  name of the syrup which can be added
+     */
     protected Syrup syrup;
-    
 
 
 
@@ -169,4 +181,52 @@ public class MixedDrink extends Drink {
     public  void  stir(){
         System.out.println("The ingredients have been stirred and the drink is now ready to serve");
     }
+
+    /**
+     * Getter for the List of extra ingredients
+     * @@return otherIngredients list of all extra ingredients
+     */
+    public List<String> getOtherIngredients() {
+        return otherIngredients;
+    }
+
+    /**
+     * Setter for the List of the extra ingredients
+     *
+     * @param otherIngredients  list of all extra ingredients
+     */
+    public void setOtherIngredients(List<String> otherIngredients) {
+        this.otherIngredients = otherIngredients;
+    }
+
+    /**
+     * Adds one extra ingredient
+     *
+     * @param otherIngredient extra Ingredient for the mixed Drink
+     */
+    public void addOtherIngredients(String otherIngredient) {
+        this.otherIngredients.add(otherIngredient);
+    }
+
+    /**
+     * Getter for the syrup
+     *
+     * @return syrup which is in the mixed Drink
+     */
+    public Syrup getSyrup() {
+        return syrup;
+    }
+
+    /**
+     * Setter for the syrup
+     *
+     * @param syrup one syrup of the enum which is added to the mixed Drink
+     */
+    public void setSyrup(Syrup syrup) {
+        this.syrup = syrup;
+    }
+
+
+
+
 }
