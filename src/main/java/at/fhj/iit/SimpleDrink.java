@@ -1,4 +1,4 @@
-package at.fhj.iit;
+package main.java.at.fhj.iit;
 /**
  * Class represents a simple drink liquid which can be used in
  * drinks
