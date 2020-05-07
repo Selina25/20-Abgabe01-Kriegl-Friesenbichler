@@ -6,21 +6,21 @@
  wird in diesem README-Dokument beschrieben worum es in dem Project
  Drinks geht und wie unsere Gruppe vorhat das vorhandene Projekt zu erweitern.*
  
-* ####Beschreibung des Projekts
+* #### Beschreibung des Projekts
   Das Hauptprojekt (also ohne die Testautomation) hat 3 Java-Files, nämlich Drink, 
   Liquid und Simple Drink. Im Folgenden werden die Funktionen dieser Files genau beschrieben. 
   
-  #####1. Drink: 
+  ##### 1. Drink: 
   Die Klasse Drink ist eine abstrakte Klasse, welche als Vorlage für tatsächliche konkrete Getränke aggiert.
   Dabei hat sie das Attribut _"name"_ und auch zahlreiche abstrakte Methoden die von abgeleiteten Klassen überschrieben werden können,
    wie getVolume(), getAlcoholPercent() und isAlcoholic().
              
-  #####2. Liquid:
+  ##### 2. Liquid:
   Die Klasse Liquid beschreibt Flüssigkeiten mit den Attributen _"name", "volume"_ und _"alcoholPercent"_, welche 
   in den tatsächlichen Getränken verwendet werden können. Die Klasse hat neben den Methoden
   getVolume() und getAlcoholPercent() natürlich auch die Getter und Setter für die jeweiligen Attribute.
   
-  #####3. SimpleDrink
+  ##### 3. SimpleDrink
   Die Klasse SimpleDrink ist von der Klasse Drink abgeleitet und stellt daher ein tatsächliches Getränk oder 
   eine tatsächliche Flüssigkeit dar, welche wiederum in Getränken verwendet werden kann. Da SimpleDrink eine abgeleitete
   Klasse ist werden die Methoden getVolume(), getAlcoholPercent() und isAlcoholic() überschrieben. 
@@ -31,7 +31,7 @@
     sind.
   
   
-- ####Beschreibung der Erweiterung
+- #### Beschreibung der Erweiterung
   Unsere Gruppe hat sich für die Möglichkeit a) entschieden, also von
   Drinks/SimpleDrink   eine   aufwändig   umzusetzende Subklasse   abzuleiten. 
   (Verwendung   einer   Collection). Dabei haben wir uns dazu entschieden ein Mischgetränk zu implementieren,
