@@ -36,6 +36,7 @@
   Drinks/SimpleDrink   eine   aufwändig   umzusetzende Subklasse   abzuleiten. 
   (Verwendung   einer   Collection). Dabei haben wir uns dazu entschieden ein Mischgetränk zu implementieren,
   welches eine Ableitung der Klasse Drinks darstellt. Das Getränk hat einen Namen, enthält zwei Flüssigkeiten. 
+  Allerdings darf nur höchstens eine der beiden Getränke Alkohol enthalten sonst wird eine Exception geworfen.
   Zusätzlich kann aus einer Auswahl ein Sirup zum Getränk hinzugefügt werden. 
   Auch eine Liste von Aromen, Früchten oder Toppings kann dem Getränk hinzugefügt werden. 
   Das Getränk hat weiters zwei Methoden, es kann sowohl gerührt als auch geschüttelt werden. 
