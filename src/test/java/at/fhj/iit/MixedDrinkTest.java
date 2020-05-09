@@ -1,24 +1,50 @@
-package test.java.at.fhj.iit;
+package at.fhj.iit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import main.java.at.fhj.iit.MixedDrink;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+
+
+@DisplayName ("Testing MixedDrink class")
 public class MixedDrinkTest{
+    private MixedDrink mx1;
+//    private MixedDrink mx2;
+//    private MixedDrink mx3;
+//    private MixedDrink mx4;
+//    private MixedDrink mx5;
 
     /**
      * BeforeEach: init multiple mixed drinks (one for each construtor)
      */
+    @BeforeEach
+    void setup(){
+        mx1 = new MixedDrink("Wine");
+//        mx2 = new MixedDrink("Spritzer", wine, soda);
+//        mx3 = new MixedDrink("Blueberry Spritzer", wine, soda, blueberry);
+//        mx4 = new MixedDrink("Whiskey Cola", whiskey, cola, ice);
+//        mx5 = new MixedDrink("Hugo", prosecco, soda, elerberry, mintleaves);
+    }
 
     /**
      * test the first constuctor (with name)
      */
+    @Test
+    @DisplayName("Testing the first constructor")
+    public void testConstructorOne(){
+
+    }
 
     /**
      * test the second constructor (name, two liquids)
      */
+    @Test
+    @DisplayName("Testing the second constructor")
+    public void testConstructorTwo(){
+
+    }
 
     /**
      * test the third constructor (name, two liquids, one syrup)

@@ -1,4 +1,4 @@
-package main.java.at.fhj.iit;
+package at.fhj.iit;
 
 public class AlcoholicSubstanceException extends Throwable {
     public AlcoholicSubstanceException() {

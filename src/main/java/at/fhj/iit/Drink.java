@@ -1,4 +1,4 @@
-package main.java.at.fhj.iit;
+package at.fhj.iit;
 
 /**
  * Abstract base class for concrete drink classes
