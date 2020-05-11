@@ -1,6 +1,11 @@
-package at.fhj.iit;
+package main.java.at.fhj.iit;
+import at.fhj.iit.AlcoholicSubstanceException;
+import at.fhj.iit.Drink;
 
 import java.util.List;
+
+
+
 /**
  * Class represents a mixed drink which can has to contain one alcoholic and one non-alcoholic liquid
  * and can be refined with different other ingredients and one syrup.
@@ -46,7 +51,7 @@ public class MixedDrink extends Drink {
      * @param name name of the drink
      *
      */
-    MixedDrink(String name){
+    public MixedDrink(String name){
         super(name);
 
     }
@@ -60,7 +65,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent()<0 || l2.getAlcoholPercent() <0) {
+        if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() == 0) {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -80,7 +85,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent()<0 || l2.getAlcoholPercent() <0) {
+        if(l1.getAlcoholPercent()  == 0 && l2.getAlcoholPercent() == 0) {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -100,7 +105,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, List<String>otherIngredients) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent()<0 || l2.getAlcoholPercent() <0) {
+        if(l1.getAlcoholPercent() == 0 && l2.getAlcoholPercent() == 0) { {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -121,7 +126,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup, List<String>otherIngredients) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent()<0 || l2.getAlcoholPercent() <0) {
+            if(l1.getAlcoholPercent() == 0 && l2.getAlcoholPercent() > 0) {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -159,7 +164,7 @@ public class MixedDrink extends Drink {
      */
     @Override
     public boolean isAlcoholic() {
-        if(l1.getAlcoholPercent()>0 || l2.getAlcoholPercent()>0){
+        if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() == 0){
             return true;
         }else {
             return false;
