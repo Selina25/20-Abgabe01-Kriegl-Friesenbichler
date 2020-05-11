@@ -85,7 +85,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent()  == 0 && l2.getAlcoholPercent() == 0) {
+        if(l1.getAlcoholPercent()  == 0 || l2.getAlcoholPercent() == 0) {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -105,7 +105,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, List<String>otherIngredients) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent() == 0 && l2.getAlcoholPercent() == 0) { {
+        if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() == 0) { {
             this.l1 = l1;
             this.l2 = l2;
         }else{
@@ -126,7 +126,7 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup, List<String>otherIngredients) throws AlcoholicSubstanceException {
         super(name);
-            if(l1.getAlcoholPercent() == 0 && l2.getAlcoholPercent() > 0) {
+            if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() > 0) {
             this.l1 = l1;
             this.l2 = l2;
         }else{
