@@ -194,16 +194,15 @@ public class MixedDrink extends Drink {
     /**
      * Shakes the ingredients of the mixed drink
      */
-    public void shake() {
-        System.out.println("The ingredients have been shook and the drink is now ready to serve");
-
+    public String shake() {
+        return "The ingredients have been shook and the drink is now ready to serve";
     }
 
     /**
      * Stirs the ingredients of the mixed drink
      */
-    public void stir() {
-        System.out.println("The ingredients have been stirred and the drink is now ready to serve");
+    public String stir() {
+        return "The ingredients have been stirred and the drink is now ready to serve";
     }
 
     /**
@@ -224,14 +223,6 @@ public class MixedDrink extends Drink {
         this.otherIngredients = otherIngredients;
     }
 
-    /**
-     * Adds one extra ingredient
-     *
-     * @param otherIngredient extra Ingredient for the mixed Drink
-     */
-    public void addOtherIngredients(String otherIngredient) {
-        this.otherIngredients.add(otherIngredient);
-    }
 
     /**
      * Getter for the syrup
