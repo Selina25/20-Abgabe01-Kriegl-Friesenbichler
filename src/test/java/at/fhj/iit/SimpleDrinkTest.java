@@ -1,9 +1,8 @@
-package test.java.at.fhj.iit;
+package at.fhj.iit;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import main.java.at.fhj.*   ;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,8 @@ import org.junit.jupiter.api.Test;
 
 @DisplayName("Testing SimpleDrink implementation")
 public class SimpleDrinkTest {
-
+    private Liquid l1, l2;
+    private SimpleDrink sD1, sD2;
 
     /**
      * inits an alcoholic liquid and an non-alcoholic Liquid to test the constructor of SimpleDrink
