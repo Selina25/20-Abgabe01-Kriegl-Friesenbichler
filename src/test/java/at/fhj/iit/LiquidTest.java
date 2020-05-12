@@ -1,9 +1,7 @@
-package test.java.at.fhj.iit;
+package at.fhj.iit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-import main.java.at.fhj.iit.Liquid;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

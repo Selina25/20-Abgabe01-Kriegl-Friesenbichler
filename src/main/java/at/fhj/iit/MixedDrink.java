@@ -1,6 +1,5 @@
-package main.java.at.fhj.iit;
-import at.fhj.iit.AlcoholicSubstanceException;
-import at.fhj.iit.Drink;
+package at.fhj.iit;
+
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class MixedDrink extends Drink {
         strawberry,
         peach,
         mint,
-        rose;
+        rose
 
     }
 
@@ -105,10 +104,10 @@ public class MixedDrink extends Drink {
      */
     MixedDrink(String name, Liquid l1, Liquid l2, List<String>otherIngredients) throws AlcoholicSubstanceException {
         super(name);
-        if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() == 0) { {
+        if(l1.getAlcoholPercent() == 0 || l2.getAlcoholPercent() == 0) {
             this.l1 = l1;
             this.l2 = l2;
-        }else{
+        } else{
             throw new AlcoholicSubstanceException();
         }
         this.otherIngredients = otherIngredients;
