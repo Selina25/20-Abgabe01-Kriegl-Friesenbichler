@@ -1,6 +1,7 @@
 package at.fhj.iit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @DisplayName("Testing MixedDrink class")
 public class MixedDrinkTest {
-    private MixedDrink mx1, mx2, mx3, mx4, mx5;
+    private MixedDrink mx1, mx2, mx3, mx4, mx5, mx6;
     private Liquid l1, l2, l3, l4, l5;
 
     /**
@@ -30,6 +31,7 @@ public class MixedDrinkTest {
         mx3 = new MixedDrink("Blueberry Spritzer", l2, l1, MixedDrink.Syrup.blueberry);
         mx4 = new MixedDrink("Whiskey Cola", l3, l4, List.of("ice"));
         mx5 = new MixedDrink("Hugo", l5, l1, MixedDrink.Syrup.elderberry, List.of("mint leaves"));
+        mx6 = new MixedDrink("Cola Light", l1, l4);
     }
 
     /**
@@ -123,6 +125,7 @@ public class MixedDrinkTest {
         assertEquals(true, mx3.isAlcoholic());
         assertEquals(true, mx4.isAlcoholic());
         assertEquals(true, mx5.isAlcoholic());
+        assertEquals(false, mx6.isAlcoholic());
     }
 
     /**
@@ -197,5 +200,28 @@ public class MixedDrinkTest {
         assertEquals(MixedDrink.Syrup.strawberry, mx2.getSyrup());
         mx4.setSyrup(MixedDrink.Syrup.rose);
         assertEquals(MixedDrink.Syrup.rose, mx4.getSyrup());
+    }
+
+    /**
+     * test the self-implemented Exception AlcoholicSubstanceException
+     */
+    @Test
+    @DisplayName("Testing the AlcoholicSubstanceException")
+    public void testAlcoholicSubstanceException(){
+        assertThrows(AlcoholicSubstanceException.class,  () -> {
+            MixedDrink mx = new MixedDrink("Cocktail", l2, l3);
+        });
+
+        assertThrows(AlcoholicSubstanceException.class,  () -> {
+            MixedDrink mx = new MixedDrink("Mint dream", l2, l3, MixedDrink.Syrup.mint);
+        });
+
+        assertThrows(AlcoholicSubstanceException.class,  () -> {
+            MixedDrink mx = new MixedDrink("Swimmingpool", l2, l5, List.of("cream"));
+        });
+
+        assertThrows(AlcoholicSubstanceException.class,  () -> {
+            MixedDrink mx = new MixedDrink("Blueberry Drink", l2, l5, MixedDrink.Syrup.blueberry, List.of("blueberries"));
+        });
     }
 }
