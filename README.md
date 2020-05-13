@@ -122,7 +122,7 @@
           }
 
     ```
-  Im speziellen wird getestet, ob beim Erstellen eines SimpleDrink die Variablen *name*, *alcoholPercent* und *volume* richtig gespeichert werden.
+  Im Speziellen wird getestet, ob beim Erstellen eines SimpleDrink die Variablen *name*, *alcoholPercent* und *volume* richtig gespeichert werden.
   
 
 >
