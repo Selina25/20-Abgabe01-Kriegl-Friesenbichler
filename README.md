@@ -109,10 +109,10 @@
   Dies ist die dazugehörige Test-Klasse zu MixedDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
     Zu Beginn, im Setup wurden 2 Liquids und in weiterer Folge 2 MixedDrinks erstellt, um danach die Konstruktoren gut testen zu können.
     Hier sehen Sie einen der Konstruktorentests:
-    ```java
+<    ```java
       /**
-           * tests the constructor of the class SimpleDrink with an non-alcoholic Liquid
-           */
+       * tests the constructor of the class SimpleDrink with an non-alcoholic Liquid
+       */
           @Test
           @DisplayName("Testing constructor non alcoholic")
           public void testConstructorNonAlcoholic(){
@@ -122,8 +122,8 @@
       
           }
 
-      ```
-    
+     ```
   Im speziellen wird getestet, ob beim Erstellen eines SimpleDrink die Variablen *name*, *alcoholPercent* und *volume* richtig gespeichert werden.
   
 
+>
