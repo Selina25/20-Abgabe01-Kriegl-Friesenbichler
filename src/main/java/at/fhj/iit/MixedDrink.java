@@ -58,7 +58,7 @@ public class MixedDrink extends Drink {
      * @param name name of the drink
      * @param l1   name of the first liquid
      * @param l2   name of the second liquid
-     * @exception  AlcoholicSubstanceException if both liquids contain alcohol
+     * @throws AlcoholicSubstanceException if both liquids contain alcohol
      */
     MixedDrink(String name, Liquid l1, Liquid l2) throws AlcoholicSubstanceException {
         super(name);
@@ -72,12 +72,13 @@ public class MixedDrink extends Drink {
 
 
     /**
-     * Creates a MixedDrink object with given name and two Liquids
+     * Creates a MixedDrink object with given name, two Liquids and  a syrup
      *
      * @param name  name of the drink
      * @param l1    name of the first liquid
      * @param l2    name of the second liquid
-     * @param syrup name of the sirup
+     * @param syrup name of the syrup
+     * @throws AlcoholicSubstanceException if both liquids contain alcohol
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup) throws AlcoholicSubstanceException {
         super(name);
@@ -91,13 +92,15 @@ public class MixedDrink extends Drink {
 
     }
 
+
     /**
-     * Creates a MixedDrink object with given name and two Liquids
+     * Creates a MixedDrink object with given name, two Liquids and a list of other Ingredients
      *
      * @param name             name of the drink
      * @param l1               name of the first liquid
      * @param l2               name of the second liquid
      * @param otherIngredients list of names of other ingredients
+     * @throws AlcoholicSubstanceException if both liquids contain alcohol
      */
     MixedDrink(String name, Liquid l1, Liquid l2, List<String> otherIngredients) throws AlcoholicSubstanceException {
         super(name);
@@ -111,14 +114,16 @@ public class MixedDrink extends Drink {
 
     }
 
+
     /**
-     * Creates a MixedDrink object with given name and two Liquids
+     * Creates a MixedDrink object with given name, two Liquids, a syrup and a list of other ingredients
      *
      * @param name             name of the drink
      * @param l1               name of the first liquid
      * @param l2               name of the second liquid
-     * @param syrup            name of the sirup
+     * @param syrup            name of the syrup
      * @param otherIngredients list of names of other ingredients
+     * @throws AlcoholicSubstanceException if both liquids contain alcohol
      */
     MixedDrink(String name, Liquid l1, Liquid l2, Syrup syrup, List<String> otherIngredients) throws AlcoholicSubstanceException {
         super(name);
