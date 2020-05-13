@@ -69,8 +69,8 @@
   Wie man sehen kann, ist es also möglich sich sein Mischgetränk auf verschiedenste Wege zusammenzustellen.
 
   ##### 2. MixedDrinkTest:
-  Dies ist die dazugehörige Test Klasse zu MixedDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
-  Zu Beginn, im setup wurden 5 Liquids und in weiterer Folge 5 MixedDrinks erstellt, um danach die Konstruktoren, getter, setter und zusätzliche Methoden gut testen zu können.
+  Dies ist die dazugehörige Test-Klasse zu MixedDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
+  Zu Beginn, im Setup wurden 5 Liquids und in weiterer Folge 5 MixedDrinks erstellt, um danach die Konstruktoren, getter, setter und zusätzliche Methoden gut testen zu können.
   Hier sehen Sie eine der Test Methoden:
   ```java
    /**
@@ -85,8 +85,45 @@
     }
   ```
 
-  Im speziellen wird getestet, ob beim Erstellen eines MixedDrinks mit dem zweiten Konstruktor *name* richtig gespeichert wird. Ebenso ob die Variablen *alcoholPercent* und *volume* richtig zusammengerechnet und in weiterer Folge richtig gespeichert werden.
+  Im speziellen wird getestet, ob beim Erstellen eines MixedDrinks mit dem zweiten Konstruktor *name* richtig gespeichert wird. 
+  Ebenso ob die Variablen *alcoholPercent* und *volume* richtig zusammengerechnet und in weiterer Folge richtig gespeichert werden.
 
   ##### 3. AlcoholicSubstanceException:
+  Dies ist die dazugehörige Klasse zur Exception AlcoholicSubstanceException. Diese wird aufgerufen wenn für ein Mischgetränk zwei alkoholische Flüssigkeiten übergeben. 
+  Denn laut unserer Definition handelt es sich nur um ein Mischgetränk wenn das Getränk entweder aus zwei nicht-alkoholischen oder aus höchstens einer alkolhaltigen Flüssigkeit besteht. 
+  Die Klasse ist folgendermaßen aufgebaut:
+  ```java
+  public class AlcoholicSubstancException extends Throwable {
+      public AlcoholicSubstanceException() {
+          super("The Definiton of a mixed drink is that it contains not more than one alcoholic liquid. Too many alcoholic liquids here.");
+      }
+  
+      public AlcoholicSubstanceException(String errorMessage, Throwable cause) {
+          super(errorMessage, cause);
+      }
+  }
+  ```
+  Die Klasse AlcoholicSubstanceException ist eine Ableitung der Throwable-Klasse und spezifiziert den Grund für die Exception eine detailierte Fehlermeldung.
 
+  ##### 4. SimpleDrinkTest:
+  Dies ist die dazugehörige Test-Klasse zu MixedDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
+    Zu Beginn, im Setup wurden 2 Liquids und in weiterer Folge 2 MixedDrinks erstellt, um danach die Konstruktoren gut testen zu können.
+    Hier sehen Sie einen der Konstruktorentests:
+    ```java
+      /**
+           * tests the constructor of the class SimpleDrink with an non-alcoholic Liquid
+           */
+          @Test
+          @DisplayName("Testing constructor non alcoholic")
+          public void testConstructorNonAlcoholic(){
+              assertEquals(0, sD1.getAlcoholPercent(), 0.001);
+              assertEquals(0.5 , sD1.getVolume(), 0.001);
+              assertEquals(false, sD1.isAlcoholic());
+      
+          }
+
+      ```
+    
+  Im speziellen wird getestet, ob beim Erstellen eines SimpleDrink die Variablen *name*, *alcoholPercent* und *volume* richtig gespeichert werden.
+  
 
