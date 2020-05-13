@@ -87,10 +87,11 @@
 
   Im speziellen wird getestet, ob beim Erstellen eines MixedDrinks mit dem zweiten Konstruktor *name* richtig gespeichert wird. 
   Ebenso ob die Variablen *alcoholPercent* und *volume* richtig zusammengerechnet und in weiterer Folge richtig gespeichert werden.
+  Auch die selbst erstellte Exception *AlcoholicSubstanceException* wurde getestet.
 
   ##### 3. AlcoholicSubstanceException:
-  Dies ist die dazugehörige Klasse zur Exception AlcoholicSubstanceException. Diese wird aufgerufen wenn für ein Mischgetränk zwei alkoholische Flüssigkeiten übergeben. 
-  Denn laut unserer Definition handelt es sich nur um ein Mischgetränk wenn das Getränk entweder aus zwei nicht-alkoholischen oder aus höchstens einer alkolhaltigen Flüssigkeit besteht. 
+  Dies ist die dazugehörige Klasse zur Exception AlcoholicSubstanceException. Diese wird aufgerufen wenn für ein Mischgetränk zwei alkoholische Flüssigkeiten übergeben werden. 
+  Denn laut unserer Definition handelt es sich nur um ein Mischgetränk wenn das Getränk entweder aus zwei nicht-alkoholischen Flüssigkeiten besteht oder höchstens eine alkolhaltige  beinhaltet. 
   Die Klasse ist folgendermaßen aufgebaut:
   ```java
   public class AlcoholicSubstancException extends Throwable {
@@ -103,12 +104,12 @@
       }
   }
   ```
-  Die Klasse AlcoholicSubstanceException ist eine Ableitung der Throwable-Klasse und spezifiziert den Grund für die Exception eine detailierte Fehlermeldung.
+  Die Klasse AlcoholicSubstanceException ist eine Ableitung der Throwable-Klasse und spezifiziert den Grund für die Exception (eine detailierte Fehlermeldung).
 
   ##### 4. SimpleDrinkTest:
-  Dies ist die dazugehörige Test-Klasse zu MixedDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
-    Zu Beginn, im Setup wurden 2 Liquids und in weiterer Folge 2 MixedDrinks erstellt, um danach die Konstruktoren gut testen zu können.
-    Hier sehen Sie einen der Konstruktorentests:
+  Dies ist die dazugehörige Test-Klasse zu SimpleDrink. Es wurde darauf geachtet, dass wirklich jede Methode durchgetestet wird um eine 100%ige Testabdeckung zu erreichen.
+  Zu Beginn, im Setup wurden 2 Liquids und in weiterer Folge 2 SimpleDrinks erstellt, um danach die Konstruktoren gut testen zu können.
+  Hier sehen Sie einen der Konstruktorentests:
     
   ```java
           @Test
