@@ -58,6 +58,7 @@ public class MixedDrink extends Drink {
      * @param name name of the drink
      * @param l1   name of the first liquid
      * @param l2   name of the second liquid
+     * @exception  AlcoholicSubstanceException if both liquids contain alcohol
      */
     MixedDrink(String name, Liquid l1, Liquid l2) throws AlcoholicSubstanceException {
         super(name);
